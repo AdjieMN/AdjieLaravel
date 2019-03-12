@@ -19,3 +19,6 @@ Route::resource('kategori','CategoryController')->except(['destroy']);
 Route::get('layout',function (){
     return view('dashboard.index');
 });
+Route::get('Admin',function (){
+    return view('dashboard');
+});
