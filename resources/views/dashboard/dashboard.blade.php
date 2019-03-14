@@ -535,7 +535,6 @@
                     <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
                   </div>
                 </div>
-                <!-- /.col -->
                 <div class="col-sm-6">
                   <div class="clearfix">
                     <span class="pull-left">Task #3</span>
@@ -553,22 +552,14 @@
                     <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
                   </div>
                 </div>
-                <!-- /.col -->
               </div>
-              <!-- /.row -->
             </div>
           </div>
-          <!-- /.box -->
-
         </section>
-        <!-- right col -->
-      </div>
-      <!-- /.row (main row) -->
-
+        </div>
     </section>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     @include('layouts.mainFooter')
   </footer>

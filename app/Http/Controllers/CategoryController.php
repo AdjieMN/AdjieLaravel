@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Category;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Http\Requests;
 
 class CategoryController extends Controller
 {
@@ -15,10 +16,16 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('Category', compact('categories'));
+        return view('tables', compact('categories'));
         dd($categories);
 
     }
+    public function search(Request $request){
+		$index = $request->get('q');
+		$result = Category::where('namaKategori', 'LIKE', '%'.$index.'%')->paginate(5);
+		return view('result', compact('index', 'result'));
+	}
+
 
     /**
      * Show the form for creating a new resource.

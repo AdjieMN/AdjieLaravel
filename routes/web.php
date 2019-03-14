@@ -22,3 +22,11 @@ Route::get('layout',function (){
 Route::get('Admin',function (){
     return view('dashboard');
 });
+Route::get('dashboard',function (){
+    return view('layouts.master');
+});
+Route::group(['middleware'=>['web']], function(){
+	Route::resource('Category','CategoryController');
+	Route::get('search','CategoryController@search')->name('post.search');
+});
+Route::get('/search', 'CategoryController@search')->name('post.search');
